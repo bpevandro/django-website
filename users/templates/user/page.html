@@ -1,0 +1,15 @@
+{% extends "mywebsite_app/base.html" %}
+
+{% block assets %}
+{% load static %}
+
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+
+{% endblock assets %}
+
+{% block content %}
+    <div id="container">
+        <p>Thank you for registering, <i>{{username}}</i>! Now you get to see this weird page! Congrats!</p>
+        <a href="{% url 'mywebsite_app:index' %}">Go back</a>
+    </div>
+{% endblock content %}
